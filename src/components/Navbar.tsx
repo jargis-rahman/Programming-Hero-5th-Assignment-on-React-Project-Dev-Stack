@@ -1,7 +1,7 @@
 import logo from '../assets/logo-text.png'
 const Navbar = () => {
     return (
-        <nav className='  border-b border-border py-6'>
+        <nav className='  border-b border-gray-100 py-6'>
             <div className='container mx-auto flex items-center justify-between'>
 
                 

@@ -4,7 +4,7 @@ const Hero = () => {
     return (
         <section className='container mx-auto items-center justify-between flex py-12'>
             <div className='flex flex-col gap-6'>
-                <h1 className='text-4xl font-bold'>Build Your Ideal<br />
+                <h1 className='text-5xl font-extrabold'>Build Your Ideal<br />
                     <span className='bg-gradient-text bg-clip-text text-transparent'>Development Stack</span></h1>
                 <p className='text-brand-gray'>Explore frontend, backend, database, and tooling options,
                     compare them side by side, and put together the stack that fits your

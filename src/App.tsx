@@ -6,6 +6,7 @@ import { Suspense, useState } from "react";
 import type { Technology } from "../types";
 import TechList from "./components/TechList";
 import Sidebar from "./components/Sidebar";
+import Footer from "./components/Footer";
 
 const fetchTechnology = async (): Promise<Technology> => {
     const res = await fetch('/data.json');
@@ -35,7 +36,8 @@ function App() {
                     </div>
                 </section>
             </main>
-
+            
+            <Footer></Footer>
 
         </>
     )

@@ -1,4 +1,4 @@
-import { useState, type Dispatch, type SetStateAction } from "react";
+import type { Dispatch, SetStateAction } from "react";
 import type { Technology } from "../types";
 import { toast } from "react-toastify";
 
@@ -13,7 +13,7 @@ const TechCard = ({ technology, addStack, setAddStack }: technologyProps) => {
 
   const handleAdd = () => {
     if (addStack.some((tech) => tech.id === technology.id)) {
-      toast.warning("Technology Already Added");
+      toast.error("Technology Already Added");
     } else {
       setAddStack([...addStack, technology]);
       toast.success("Technology Added Successfully")
