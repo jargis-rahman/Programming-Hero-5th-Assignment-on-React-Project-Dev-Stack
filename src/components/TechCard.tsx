@@ -10,11 +10,14 @@ interface technologyProps {
 
 const TechCard = ({ technology, addStack, setAddStack }: technologyProps) => {
 
-  const [isAdded, setIsAdded] = useState(false);
+
   const handleAdd = () => {
-    setIsAdded(true);
-    setAddStack([...addStack, technology]);
-    toast.success("Technology Added Successfully")
+    if (addStack.some((tech) => tech.id === technology.id)) {
+      toast.warning("Technology Already Added");
+    } else {
+      setAddStack([...addStack, technology]);
+      toast.success("Technology Added Successfully")
+    }
   }
   return (
     <div className="flex flex-col gap-4 border border-border rounded-2xl p-8 ">
@@ -31,12 +34,11 @@ const TechCard = ({ technology, addStack, setAddStack }: technologyProps) => {
       </div>
 
       <button
-        onClick={handleAdd}
-        className={`bg-brand-dark text-page px-6 py-3 rounded-full mt-4 ${isAdded ? "bg-gray-400" : "bg-brand-dark cursor-pointer"}`}
-        disabled={isAdded}
-      >
-        {isAdded ? "Added" : "Add to Stack"}
 
+        onClick={handleAdd}
+        className="bg-brand-dark text-page px-6 py-3 rounded-full mt-4 cursor-pointer"
+      >
+        Add to Stack
       </button>
     </div>
   )
