@@ -1,5 +1,6 @@
 import type { Dispatch, SetStateAction } from "react";
 import type { Technology } from "../types";
+import { toast } from "react-toastify";
 
 
 interface technologyProps {
@@ -29,13 +30,20 @@ const Sidebar = ({ addStack, setAddStack }: technologyProps) => {
 
                             </div>
                             <button
-                                onClick={() => setAddStack(addStack.filter((tech) => tech.id !== technology.id))}
-                                className="text-6xl text-brand-gray font-light cursor-pointer">×</button>
+                                onClick={() => {
+                                    setAddStack(addStack.filter((tech) => tech.id !== technology.id));
+                                    toast.error("Technology Removed")
+                                }}
+                                className="text-6xl text-brand-gray font-light cursor-pointer"
+                                >×</button>
 
                         </div>
                     ))}
                     <button
-                        onClick={() => setAddStack([])}
+                        onClick={() => {
+                            setAddStack([]);
+                            toast.error("All Technology Removed")
+                        }}
                         className="w-full  text-red-500 text-2xl font-semibold cursor-pointer py-4 px-10 border border-red-500 rounded-2xl mt-8 mb-2">Remove All</button>
                 </div>)
 

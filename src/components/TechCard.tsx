@@ -1,5 +1,6 @@
 import { useState, type Dispatch, type SetStateAction } from "react";
 import type { Technology } from "../types";
+import { toast } from "react-toastify";
 
 interface technologyProps {
   technology: Technology;
@@ -13,6 +14,7 @@ const TechCard = ({ technology, addStack, setAddStack }: technologyProps) => {
   const handleAdd = () => {
     setIsAdded(true);
     setAddStack([...addStack, technology]);
+    toast.success("Technology Added Successfully")
   }
   return (
     <div className="flex flex-col gap-4 border border-border rounded-2xl p-8 ">
