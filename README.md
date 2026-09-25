@@ -16,7 +16,7 @@ Technology used:
 2. State management & Fast data rendering.
 3. Interective conditional UI Functionality.
 
-<!-- React Related Answer -->
+React Related Questions Answers:
 1. JSX is allow to write like HTML code with JavaScript.
 2. Props: We can pass data from parents component to child components. Props is Immuable.
 State: State can change with user activity. it's Mutable.
