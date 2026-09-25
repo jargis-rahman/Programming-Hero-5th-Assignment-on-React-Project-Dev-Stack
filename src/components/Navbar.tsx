@@ -1,12 +1,12 @@
 import logo from '../assets/logo-text.png'
 const Navbar = () => {
     return (
-        <nav className='  border-b border-gray-100 py-6'>
+        <nav className=' bg-page border-b border-gray-100 py-6 top-0 z-50 sticky'>
             <div className='container mx-auto flex items-center justify-between'>
 
-                
-                    <a href=""><img src={logo} alt="DevStack" /></a>
-                
+
+                <a href=""><img src={logo} alt="DevStack" /></a>
+
                 <div className='flex items-center'>
                     <ul className='flex gap-4'>
                         <li><a href="">Home</a></li>

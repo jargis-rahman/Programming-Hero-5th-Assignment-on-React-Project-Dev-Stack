@@ -1,5 +1,4 @@
 import Hero from "./components/Hero"
-import MainLayout from "./components/MainLayout"
 import Navbar from "./components/Navbar"
 
 import { Suspense, useState } from "react";
