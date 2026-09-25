@@ -8,3 +8,6 @@ export interface Technology {
   difficulty: string;
   badge: string;
 }
+
+
+

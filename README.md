@@ -1,32 +1,28 @@
-# React + TypeScript + Vite
+<!-- GitHub Repository Details -->
+Project Name: Dev-Stack
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Description: This Project help to explore frontend, backend, database, and tooling options, compare them side by side, and put together the stack that fits our next project.
 
-Currently, two official plugins are available:
+Technology used:
+-React.js
+-Tailwind CSS
+-TypeScript / JavaScript (ES6+)
+-React-Toastify (NPM Package)
+-JSON (for technology data)
+-Vite (build tool)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+3 features of the project:
+-1. Clean & Modern UI
+-2. State management & Fast data rendering.
+-3. Interective conditional UI Functionality.
 
-## React Compiler
+<!-- React Related Answer -->
+-i. JSX is allow to write like HTML code with JavaScript.
+-ii. Props: We can pass data from parents component to child components. Props is Immuable.
+State: State can change with user activity. it's Mutable.
+-iii. UseState is a default component of React that we can use to change/update data. We have used it to Update the Your Stack / Sidebar section in our project.
+-iv. useEffect hook allow to mannage side effect of component. We need it because we can display the fetching data as soon as it loads.
+-v. Every item in a .map() list need a unique key prop because it's help to organize data in React Vartual DOM.
+-vi. Conditional Rendering is showing UI according to the condition. We have use it Your Stack / Sidebar section in our project.
+-v. Parent component send the Props Using a Callback Function.Then Child Component send the data by calling this Function.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
-
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
